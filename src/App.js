@@ -1,11 +1,10 @@
-import React,{useState} from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Game from './components/Game';
 import NavigationBar from './components/NavigationBar';
 import './App.css';
 
 const App = () => {
-    const [squares, setSquares] = useState(Array(9).fill(null));
     const calculateWinner = (squares) => {
         const lines = [
             [0, 1, 2],
@@ -34,7 +33,7 @@ const App = () => {
             <div className="page">
                 <div className="app-wrapper">
                     <div className="app">
-                    <Game squares={squares} calculateWinner={calculateWinner} setSquares={setSquares}/>
+                    <Game calculateWinner={calculateWinner} />
                     </div>
                 </div>    
             </div>

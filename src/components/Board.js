@@ -1,38 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Square from './Square';
 
 
 
 
-const Board = ({setStepNumber, status,history, setHistory , squares,calculateWinner, setSquares}) => {
-    const winner = calculateWinner(squares);
+const Board = ({squares, handleClick}) => {
+    
 
     const renderSquare = (i) => {
-        return <Square index={i} squares={squares}  handleSquareClick={handleSquareClick} />;
+        return <Square index={i} squares={squares}  handleClick={handleClick} />;
     };
-    const [isXNext, setIsXNext] = useState(true);
-    const handleSquareClick = (i) => {
-        if(winner || squares[i] ){
-            return ;
-        } else {
-            let squareList = [...squares];
-            squareList[i] = isXNext ? "X" : "O";
-            setIsXNext(!isXNext);
-            setSquares(squareList);
-            setHistory(history.concat([{squares:squares}]))
-            setStepNumber(history.length)
-        } 
-        }
     
-    if(winner){
-        status = 'Winner: ' + winner;
-    } else {
-        status = 'Next player: ' + (isXNext ? 'X' : 'O');
-    }
+    console.log(handleClick)
 
     return (
         <div>
-            <div className="status">{status}</div>
             <div className="board-row">
                 {renderSquare(0)}
                 {renderSquare(1)}

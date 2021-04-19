@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Square = ({index, squares, handleSquareClick}) => {
+const Square = ({index, squares, handleClick}) => {
     const handleOnClick = () => {
-        handleSquareClick(index);
+        handleClick(index);
         
     }
     return (
