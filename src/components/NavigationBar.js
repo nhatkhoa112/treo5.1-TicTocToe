@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {Navbar, Nav, Form} from 'react-bootstrap';
 const NavigationBar = ({account, setAccount}) => {
-    const [user, setUser] = useState("")
     const handleSubmit = (e) => {
         e.preventDefault();
-        setUser(account);
         localStorage.setItem('user', account)
     }
 
