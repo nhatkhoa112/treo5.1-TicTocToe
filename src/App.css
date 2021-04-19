@@ -1,7 +1,46 @@
 /* ./src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&display=swap');
+
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.page {
+    width: 100%;
+    height: 100vh;
+    background-color: #77c987;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-wrapper {
+    width: 90%;
+    max-width: 150rem;
+    height: 80vh;
+    background-color: #2c2c2d;
+    color: #eee;
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.7);
+    display: grid;
+    grid-template-columns: minmax(38%, 40rem) repeat(2, minmax(29%, 29rem));
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 1rem;
+    position: relative;
+}
+
+.app{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 ol,
@@ -40,6 +79,24 @@ ul {
 
 .square:focus {
     outline: none;
+}
+
+.color-red{
+    color: #77c987;
+    font-family: 'Comfortaa', cursive;
+    text-shadow: 0 0px 20px #77c987;
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+.color-blue{
+    color:#ff716e;
+    font-family: 'Comfortaa', cursive;
+    text-shadow: 0 0px 20px#ff716e;
+    font-size: 30px;
+    font-weight: 700;
+
 }
 
 .kbd-navigation .square:focus {

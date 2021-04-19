@@ -27,8 +27,12 @@ const App = () => {
 
 
     return (
-        <div className="App">
-            <Game squares={squares} calculateWinner={calculateWinner} setSquares={setSquares}/>
+        <div className="page">
+            <div className="app-wrapper">
+                <div className="app">
+                <Game squares={squares} calculateWinner={calculateWinner} setSquares={setSquares}/>
+                </div>
+            </div>    
         </div>
     );
 }

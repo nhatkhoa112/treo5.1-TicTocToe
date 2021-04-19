@@ -6,7 +6,7 @@ const Square = ({index, squares, handleSquareClick}) => {
         
     }
     return (
-        <button className="square" onClick={handleOnClick}>
+        <button className={squares[index] === "X" ? "square color-blue" : "square color-red" } onClick={handleOnClick}>
             {squares[index]}
         </button>
     );
