@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import Square from './Square';
 
 
-const Board = ({squares,calculateWinner, setSquares}) => {
+
+
+const Board = ({setStepNumber, status,history, setHistory , squares,calculateWinner, setSquares}) => {
     const winner = calculateWinner(squares);
-    let status;
+
     const renderSquare = (i) => {
         return <Square index={i} squares={squares}  handleSquareClick={handleSquareClick} />;
     };
-
     const [isXNext, setIsXNext] = useState(true);
-
     const handleSquareClick = (i) => {
         if(winner || squares[i] ){
             return ;
@@ -19,6 +19,8 @@ const Board = ({squares,calculateWinner, setSquares}) => {
             squareList[i] = isXNext ? "X" : "O";
             setIsXNext(!isXNext);
             setSquares(squareList);
+            setHistory(history.concat([{squares:squares}]))
+            setStepNumber(history.length)
         } 
         }
     

@@ -7,6 +7,44 @@ body {
     padding: 0;
 }
 
+.logo{
+    width: 50px;
+    margin: 0 20px;
+}
+
+.input-text{
+    border: none;
+    background: #F8F9FA;
+    border-bottom: 2px  #77c987 solid;
+    position: relative;
+    left: -200px;
+}
+
+.input-text:active{
+    border: none;
+    background: #F8F9FA;
+    border-bottom: 2px  #77c987 solid;
+}
+
+.input-text::placeholder{
+    color: #ff716e;
+    position: relative;
+    left: 10px;
+}
+
+.input-submit{
+    position: relative;
+    left: -190px;
+    background: #F8F9FA;
+    border:#ff716e 1px solid ;
+    color:  #77c987;
+}
+
+.input-submit:hover{
+    background: #ff716e;
+    border: 2px  #77c987 solid
+}
+
 
 .page {
     width: 100%;

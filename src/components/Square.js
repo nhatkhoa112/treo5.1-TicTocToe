@@ -13,3 +13,4 @@ const Square = ({index, squares, handleSquareClick}) => {
 };
 
 export default Square
+

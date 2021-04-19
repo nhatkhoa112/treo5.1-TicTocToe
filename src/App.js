@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Game from './components/Game';
+import NavigationBar from './components/NavigationBar';
 import './App.css';
 
 const App = () => {
@@ -27,13 +28,17 @@ const App = () => {
 
 
     return (
-        <div className="page">
-            <div className="app-wrapper">
-                <div className="app">
-                <Game squares={squares} calculateWinner={calculateWinner} setSquares={setSquares}/>
-                </div>
-            </div>    
-        </div>
+
+        <>
+            <NavigationBar />
+            <div className="page">
+                <div className="app-wrapper">
+                    <div className="app">
+                    <Game squares={squares} calculateWinner={calculateWinner} setSquares={setSquares}/>
+                    </div>
+                </div>    
+            </div>
+        </>
     );
 }
 
