@@ -53,6 +53,11 @@ body {
     border: 2px  #77c987 solid
 }
 
+.winner{
+    font-family: 'Comfortaa', cursive;
+    margin: 10px;
+
+}
 
 .page {
     position:relative;
@@ -162,4 +167,9 @@ ul {
 
 .game-board{
     margin-left: 200px;
+}
+
+.input-signout{
+    position: relative;
+    left: -300px;
 }

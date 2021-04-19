@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Navbar, Nav, Form} from 'react-bootstrap';
+const NavigationBar = ({account, setAccount}) => {
+    const [user, setUser] = useState("")
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setUser(account);
+        localStorage.setItem('user', account)
+    }
 
-const NavigationBar = () => {
+const handleSignOut = () => {
+
+    
+    localStorage.setItem('user', "")
+}
+
     return (
         <div>
             <Navbar bg="light" expand="lg">
@@ -14,10 +26,20 @@ const NavigationBar = () => {
 
                     
                     </Nav>
-                    <Form inline>
-                        <input type="text" placeholder="username" className="input-text" />
-                        <input type="submit" value="Sign-in" className="input-submit" />
-                    </Form>
+                    {(user === "") ? (
+                        <Form inline onSubmit={handleSubmit}>
+                            <input type="text" placeholder="username" className="input-text" onChange={(e) => setAccount(e.target.value)} />
+                            <input type="submit" value="Sign-in" className="input-submit" onClick={handleSubmit} />
+                        </Form>
+                    ) : (
+                        <Form inline >
+                            <h4 class="user-text"> {localStorage.getItem("user")} </h4>
+                            <input type="submit" value="Sign-out" className="input-signout" onClick={handleSignOut} />
+
+                        </Form>
+                    )}
+                    
+
                 </Navbar.Collapse>
             </Navbar>
         </div>

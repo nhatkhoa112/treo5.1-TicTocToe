@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Game from './components/Game';
 import NavigationBar from './components/NavigationBar';
 import './App.css';
 
 const App = () => {
+    const [account, setAccount] = useState('')
     const calculateWinner = (squares) => {
         const lines = [
             [0, 1, 2],
@@ -29,7 +30,7 @@ const App = () => {
     return (
 
         <>
-            <NavigationBar />
+            <NavigationBar account={account} setAccount={setAccount} />
             <div className="page">
                 <div className="app-wrapper">
                     <div className="app">

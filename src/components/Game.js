@@ -48,8 +48,7 @@ const Game = ({calculateWinner}) => {
                         />
             </div>
             <div className="game-info">
-                <h3>History</h3>
-                <div>{winner ? 'Winner' + winner : 'Next Player:' +xO}</div>
+                <div className="winner">{winner ? 'Winner ' + winner : 'Next Player: ' +xO}</div>
                 <ol>{moves}</ol>
             </div>
         </div>
