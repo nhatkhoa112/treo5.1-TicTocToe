@@ -4,6 +4,7 @@ const NavigationBar = ({account, setAccount}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         localStorage.setItem('user', account)
+        document.location.reload();
     }
 
 const handleSignOut = () => {
