@@ -26,7 +26,7 @@ const handleSignOut = () => {
 
                     
                     </Nav>
-                    {(user === "") ? (
+                    {(localStorage.getItem("user") === "") ? (
                         <Form inline onSubmit={handleSubmit}>
                             <input type="text" placeholder="username" className="input-text" onChange={(e) => setAccount(e.target.value)} />
                             <input type="submit" value="Sign-in" className="input-submit" onClick={handleSubmit} />
